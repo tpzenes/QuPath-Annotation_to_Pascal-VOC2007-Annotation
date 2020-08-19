@@ -6,7 +6,7 @@ import javax.imageio.ImageIO;
 
 def images = []
 
-def imgs_path = "/home/safir/Downloads/" 
+def imgs_path = "Path to Images" 
 
 def project = getProject()
 
@@ -50,7 +50,7 @@ boolean prettyPrint = true
 
 def gson = GsonTools.getInstance(prettyPrint)
 
-FileWriter writer = new FileWriter("/home/safir/Desktop/QuPath_Test/test.txt")
+FileWriter writer = new FileWriter("Annotation export path")
 
 gson.toJson(images,writer)
 
