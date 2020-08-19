@@ -21,14 +21,14 @@ import javax.xml.transform.stream.StreamResult;
 public class xml_json_parse {
    public static void main(String[] args) {
 	   
-	   int xmin_arr[ ] = new int[300];
-	   int ymin_arr[ ] = new int[300];
-	   int xmax_arr[ ] = new int[300];
-	   int ymax_arr[ ] = new int[300];
-	   String label_arr[] = new String[300];
-	   String filename;
-	   long width,height;
-	   
+       int xmin_arr[ ] = new int[300];
+       int ymin_arr[ ] = new int[300];
+       int xmax_arr[ ] = new int[300];
+       int ymax_arr[ ] = new int[300];
+       String label_arr[] = new String[300];
+       String filename;
+       long width,height;
+       
        //JSON parser object to parse read file
        JSONParser jsonParser = new JSONParser();
         
@@ -42,8 +42,8 @@ public class xml_json_parse {
            
            for (int i=0; i<annots.size();i++) {
         	   
-        	   JSONObject annot = (JSONObject) annots.get(i);        	   
-        	   double xmin,ymin,xmax,ymax;
+               JSONObject annot = (JSONObject) annots.get(i);        	   
+               double xmin,ymin,xmax,ymax;
     	   	   
     	       filename = (String) annot.get("filename");
     	       width = (long) annot.get("width");
@@ -139,12 +139,12 @@ public class xml_json_parse {
         	               
         	               eElement.getElementsByTagName("xmin").item(0).setTextContent(String.valueOf(xmin_arr[temp]));
         	               eElement.getElementsByTagName("ymin").item(0).setTextContent(String.valueOf(ymin_arr[temp]));
-        	    		   eElement.getElementsByTagName("xmax").item(0).setTextContent(String.valueOf(xmax_arr[temp]));
-        	    		   eElement.getElementsByTagName("ymax").item(0).setTextContent(String.valueOf(ymax_arr[temp]));
-        	    		   eElement.getElementsByTagName("name").item(0).setTextContent(label_arr[temp]);
-        	    		   eElement.getElementsByTagName("truncated").item(0).setTextContent("unspecified");
-        	    		   eElement.getElementsByTagName("difficult").item(0).setTextContent("unspecified");
-        	    		   eElement.getElementsByTagName("pose").item(0).setTextContent("unspecified");
+        	    	       eElement.getElementsByTagName("xmax").item(0).setTextContent(String.valueOf(xmax_arr[temp]));
+        	    	       eElement.getElementsByTagName("ymax").item(0).setTextContent(String.valueOf(ymax_arr[temp]));
+        	    	       eElement.getElementsByTagName("name").item(0).setTextContent(label_arr[temp]);
+        	    	       eElement.getElementsByTagName("truncated").item(0).setTextContent("unspecified");
+        	    	       eElement.getElementsByTagName("difficult").item(0).setTextContent("unspecified");
+        	    	       eElement.getElementsByTagName("pose").item(0).setTextContent("unspecified");
         	            }
         	         }
         	         
