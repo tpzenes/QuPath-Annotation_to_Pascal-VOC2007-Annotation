@@ -1,1 +1,1 @@
-# QuPath_Annotation_to_Pascal_VOC2007_Annotation
+# QuPath-Annotation_to_Pascal-VOC2007-Annotation
