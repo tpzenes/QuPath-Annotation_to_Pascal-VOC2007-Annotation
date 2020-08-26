@@ -29,7 +29,7 @@ public class deneme_parse {
             //JSON parser object to parse read file
             JSONParser jsonParser = new JSONParser();
             
-            try (FileReader reader = new FileReader("C:/Users/enes_/Desktop/QuPath_Projects/another_test.json")){
+            try (FileReader reader = new FileReader("Path to json Annotation File")){
             	
             	//Read JSON file
                 Object obj = jsonParser.parse(reader);
@@ -44,7 +44,7 @@ public class deneme_parse {
               	  String wdth =  String.valueOf(annot.get("Width"));
               	  String hght =  String.valueOf(annot.get("Height"));
                 	
-                  String xmlFilePath = "C:/Users/enes_/Desktop/QuPath_Projects/" + fname + ".xml";
+                  String xmlFilePath = "Path to new files to be created" + fname + ".xml";
                   
              	  DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
                   
@@ -138,7 +138,7 @@ public class deneme_parse {
             	  
                   for (int j=0;j<objcount;j++) {
                 	  
-                	  JSONObject isaret = (JSONObject) annotArray.get(j);
+                     JSONObject isaret = (JSONObject) annotArray.get(j);
                       
                       
                       String label = (String) isaret.get("label");
@@ -148,7 +148,7 @@ public class deneme_parse {
                       String xmx = String.valueOf((int) ((double) isaret.get("leftTopx") + (double) isaret.get("xwidth")));
                       String ymx = String.valueOf((int) ((double) isaret.get("leftTopy") + (double) isaret.get("yheight")));
                 	  
-                  	  // object element
+                      // object element
                       Element object = document.createElement("object");
                       root.appendChild(object);
                       
