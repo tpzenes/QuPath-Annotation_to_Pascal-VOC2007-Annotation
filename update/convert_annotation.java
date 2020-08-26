@@ -65,11 +65,6 @@ public class deneme_parse {
                   Element filename = document.createElement("filename");
                   filename.appendChild(document.createTextNode(fname));
                   root.appendChild(filename);
-       
-                  // segmented element
-                  Element segmented = document.createElement("segmented");
-                  segmented.appendChild(document.createTextNode("unspecified"));
-                  root.appendChild(segmented);
                   
                   // source element
                   Element source = document.createElement("source");
@@ -127,13 +122,16 @@ public class deneme_parse {
                   Element depth = document.createElement("depth");
                   depth.appendChild(document.createTextNode("1"));
                   size.appendChild(depth);
+			
+		  // segmented element
+                  Element segmented = document.createElement("segmented");
+                  segmented.appendChild(document.createTextNode("unspecified"));
+                  root.appendChild(segmented);
                   
                   JSONArray annotArray = (JSONArray) annot.get("isaretler");
             	  
             	  int objcount = annotArray.size() ;
-                  
-            	  
-            	  
+			
                   for (int j=0;j<objcount;j++) {
                 	  
                      JSONObject isaret = (JSONObject) annotArray.get(j);
